@@ -1,0 +1,158 @@
+author            = "O. 'Maple' Syrup";
+respawnOnStart = -1;
+
+ace_respawn_removeDeadBodiesDisconnected = 1;
+
+class ACEX_Fortify_Presets {
+    class 31stFortifyPreset {
+        displayName = "31st Fortify Woodland";
+        objects[] = {
+             {"Land_TCP_FOB_Barrier_06_Olive", 15, "Barriers"},
+            {"Land_TCP_FOB_Barrier_05_Olive", 15, "Barriers"},
+            {"Land_TCP_FOB_barrier_04_Olive", 15, "Barriers"},
+
+            {"Land_Razorwire_F", 5, "Other"}
+
+        };
+    };
+};
+
+class CfgSounds
+{
+    class generator_sound {
+        name     = "generator_sound";
+        sound[]  = { "sounds\generator_sound.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class generator_startup_sfx {
+        name     = "generator_startup_sfx";
+        sound[]  = { "sounds\generator_startup_sfx.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class generator_startup_voice {
+        name     = "generator_startup_voice";
+        sound[]  = { "sounds\generator_startup_voice.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class meltdown {
+        name     = "meltdown";
+        sound[]  = { "sounds\meltdown.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class scientist_saved {
+        name     = "scientist_saved";
+        sound[]  = { "sounds\scientist_saved.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class scientist_suicide {
+        name     = "scientist_suicide";
+        sound[]  = { "sounds\scientist_suicide.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class ai_brief {
+        name     = "ai_brief";
+        sound[]  = { "sounds\ai_brief.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class ai_phase1end {
+        name     = "ai_phase1end";
+        sound[]  = { "sounds\ai_phase1end.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class ai_phase2end {
+        name     = "ai_phase2end";
+        sound[]  = { "sounds\ai_phase2end.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class ai_phase2start {
+        name     = "ai_phase2start";
+        sound[]  = { "sounds\ai_phase2start.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class ai_phase3end {
+        name     = "ai_phase3end";
+        sound[]  = { "sounds\ai_phase3end.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class ai_phase3meltdown {
+        name     = "ai_phase3meltdown";
+        sound[]  = { "sounds\ai_phase3meltdown.ogg", 10, 1 };
+        titles[] = {};
+    };
+    class ai_phase3start {
+        name     = "ai_phase3start";
+        sound[]  = { "sounds\ai_phase3start.ogg", 10, 1 };
+        titles[] = {};
+    };
+};
+
+class CfgFunctions {
+    class MyMission {
+        class Objective {
+            class repair {
+                file = "scripts\obj\repair.sqf";
+            };
+            class repair_progress {
+                file = "scripts\obj\repair_progress.sqf";
+            };
+            class transmit {
+                file = "scripts\obj\transmit.sqf";
+            };
+            class transmit_progress {
+                file = "scripts\obj\transmit_progress.sqf";
+            };
+        };
+        class Effect {
+            class cloakOn {
+                file = "scripts\effect\cloakOn.sqf";
+            }
+            class cloakOff {
+                file = "scripts\effect\cloakOff.sqf";
+            }
+        }
+    };
+};
+
+// ── Base class includes (needed for Rsc* inheritance) ──────────────────────
+#include "\a3\ui_f\hpp\defineResinclDesign.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+
+import RscObject;
+import RscText;
+import RscFrame;
+import RscLine;
+import RscProgress;
+import RscPicture;
+import RscPictureKeepAspect;
+import RscVideo;
+import RscHTML;
+import RscButton;
+import RscShortcutButton;
+import RscEdit;
+import RscCombo;
+import RscListBox;
+import RscListNBox;
+import RscXListBox;
+import RscTree;
+import RscSlider;
+import RscXSliderH;
+import RscActiveText;
+import RscActivePicture;
+import RscActivePictureKeepAspect;
+import RscStructuredText;
+import RscToolbox;
+import RscControlsGroup;
+import RscControlsGroupNoScrollbars;
+import RscControlsGroupNoHScrollbars;
+import RscControlsGroupNoVScrollbars;
+import RscButtonTextOnly;
+import RscButtonMenu;
+import RscButtonMenuOK;
+import RscButtonMenuCancel;
+import RscButtonMenuSteam;
+import RscMapControl;
+import RscMapControlEmpty;
+import RscCheckBox;
+
+#include "UI\Datapad.hpp"
