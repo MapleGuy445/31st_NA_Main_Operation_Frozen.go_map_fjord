@@ -740,12 +740,12 @@ ScifiSupportPLUS_fnc_SpawnShipLightsAndSound = {
     ]
 ] call ScifiSupportPLUS_fnc_RegisterShipLights;
 
-frigate = "31st_Frigate_UNSC" createVehicleLocal (getPosATL icarus);
+frigate = "31st_Frigate_Icarus" createVehicleLocal (getPosATL icarus);
 frigate setVectorDirAndUp [(vectorDir icarus), (vectorUp icarus)];
 frigate setPosATL (getPosATL icarus);
 
 [frigate] call ScifiSupportPLUS_fnc_SpawnShipLightsAndSound;
 
-[-1, 4, frigate, 4000] call MyMission_fnc_earthquake_continuous;
+[-1, 3, frigate, 4000] call MyMission_fnc_earthquake_continuous;
 
 missionNamespace setVariable ["manual_override", "on", true];
